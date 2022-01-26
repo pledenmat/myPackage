@@ -1,6 +1,6 @@
 Package: myPackage
 Title: Contains utility functions used in multiple projects
-Version: 0.0.0.9000
+Version: 0.0.1.0
 Authors@R: 
     person("Pierre", "Le Denmat", , "pierre.ledenmat@kuleuven.be", role = c("aut", "cre"),
            comment = c(ORCID = "YOUR-ORCID-ID"))
