@@ -10,7 +10,7 @@
 #' @details This is the function used to simultaneously fit reaction time, accuracy and confidence judgments via quantile optimization.  
 #'
 #' @examples
-#' 
+#' @export
 chi_square_optim <- function(params, observations, returnFit, model = 1, hm_up = NULL, hm_low = NULL ){
   #First, generate predictions:
   drift <- params[11:length(params)]
