@@ -31,6 +31,3 @@ chi_square_optim
 \details{
 This is the function used to simultaneously fit reaction time, accuracy and confidence judgments via quantile optimization.
 }
-\examples{
-
-}
