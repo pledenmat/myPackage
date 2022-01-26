@@ -35,7 +35,7 @@ DDM_with_confidence_slow <- function(v, a, ter, z, ntrials, s, dt, t2time, postd
 #' so that all confidence RT trials are repeated the same number of times
 #' @param s Scaling parameter
 #' @param dt Time step size
-#' @param t2time Vector containing the whole confidence RT distribution
+#' @param t2distribution Vector containing the whole confidence RT distribution
 #' @param postdriftmod V-ratio. If equal to 1, post-decision drift rate is equal to decision drift rate
 #' @export
 DDM_with_confidence_slow_fullconfRT <- function(v, a, ter, z, ntrials, s, dt, t2distribution, postdriftmod) {

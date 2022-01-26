@@ -32,9 +32,9 @@ so that all confidence RT trials are repeated the same number of times}
 
 \item{dt}{Time step size}
 
-\item{postdriftmod}{V-ratio. If equal to 1, post-decision drift rate is equal to decision drift rate}
+\item{t2distribution}{Vector containing the whole confidence RT distribution}
 
-\item{t2time}{Vector containing the whole confidence RT distribution}
+\item{postdriftmod}{V-ratio. If equal to 1, post-decision drift rate is equal to decision drift rate}
 }
 \description{
 This function generates trials using the Drift Diffusion Model. Additional

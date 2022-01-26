@@ -18,4 +18,6 @@ Imports:
     RcppZiggurat,
     MALDIquant,
     fields,
-    viridis
+    viridis,
+    graphics,
+    stats

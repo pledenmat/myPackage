@@ -1,4 +1,4 @@
-// in r: install rcpp library and ZigguratRCPP library, then source this script and the function becomes available (source('DDM_KSfitting'))
+// in r: install rcpp library and RCPPZiggurat library, then source this script and the function becomes available (source('DDM_KSfitting'))
 #include <Rcpp.h>
 // [[Rcpp::depends(RcppZiggurat)]]
 #include <Ziggurat.h>

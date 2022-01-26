@@ -1,4 +1,4 @@
-// in r: install rcpp library and ZigguratRCPP library, then source this script and the function becomes available (source('DDM_KSfitting'))
+// in r: install rcpp library and RCPPZiggurat library, then source this script and the function becomes available (source('DDM_KSfitting'))
 #include <Rcpp.h>
 // [[Rcpp::depends(RcppZiggurat)]]
 #include <Ziggurat.h>
@@ -18,7 +18,7 @@ static Ziggurat::Ziggurat::Ziggurat zigg;
 //' so that all confidence RT trials are repeated the same number of times
 //' @param s Scaling parameter
 //' @param dt Time step size
-//' @param t2time Vector containing the whole confidence RT distribution
+//' @param t2distribution Vector containing the whole confidence RT distribution
 //' @param postdriftmod V-ratio. If equal to 1, post-decision drift rate is equal to decision drift rate
 //' @export
 // [[Rcpp::export]]
