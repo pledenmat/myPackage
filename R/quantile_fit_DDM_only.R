@@ -45,7 +45,7 @@ chi_square_optim_DDM <- function(params, observations, returnFit, model = 1, hm_
     c_observed <- observations[observations$cor == 1,]
     e_observed <- observations[observations$cor == 0,]
 
-    coherences <- sort(unique(observations$coh)) # CHANGE ACCORDING TO DATASET
+    coherences <- sort(unique(observations$coh)) #/!\ CHANGE ACCORDING TO DATASET
 
     obs_props <- NULL; pred_props <- NULL;obs_props_cj <- NULL; pred_props_cj <- NULL
     for (d in 1:length(drift)) {
@@ -68,7 +68,7 @@ chi_square_optim_DDM <- function(params, observations, returnFit, model = 1, hm_
 
       c_predicted_rt <- sort(c_predicted[c_predicted$drift == drift[d],]$rt)
       e_predicted_rt <- sort(e_predicted[e_predicted$drift == drift[d],]$rt)
-      # now, get the proportion of responses that fall between the observed quantiles when applied to the predicted data (scale by N?)
+      # now, get the proportion of responses that fall between the observed quantiles when applied to the predicted data
       c_pred_proportion <- c(
         sum(c_predicted_rt <= c_quantiles[1]),
         sum(c_predicted_rt <= c_quantiles[2]) - sum(c_predicted_rt <= c_quantiles[1]),
