@@ -131,7 +131,7 @@ chi_square_optim_DDM_fullconfRT <- function(params, observations, returnFit,conf
     predictionsneg <- data.frame(myPackage::DDM_with_confidence_slow_fullconfRT(
       v=-drift[d],a=params['a'],ter=params['ter'],z=params['z'],
       ntrials=params['ntrials']*dim(observations)[1]/2/length(drift),s=params['sigma'],
-      dt=params['dt'],t2distribution=rep(observations[,confRT_name],times=params['ntrials']),
+      dt=params['dt'],t2distribution=rep(observations[observations$coh==coherences[d],confRT_name],times=params['ntrials']),
       postdriftmod=params['vratio']))
     names(predictions) <- c('rt','resp','cor','evidence2','rt2','cj')
     names(predictionsneg) <- c('rt','resp','cor','evidence2','rt2','cj')
