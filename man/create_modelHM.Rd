@@ -19,10 +19,6 @@ create_modelHM(
 )
 }
 \arguments{
-\item{alpha}{}
-
-\item{beta}{}
-
 \item{type}{One of 3 possible types of heat map (upper, lower and symmetrical).
 Upper (resp. lower) shows the confidence linked to an upper (resp. lower) boundary hit.
 Symmetrical shows the symmetrical heat map. Defaults to "upper"}
