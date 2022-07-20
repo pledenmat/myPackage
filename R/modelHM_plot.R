@@ -2,12 +2,9 @@
 #'
 #' @description Returns the sign of each value within a vector. If 0, returns 1 or
 #' -1 with equal probability
-#' @param x
+#' @param x vector of numerical values
 #'
-#' @return
 #' @export
-#'
-#' @examples
 custom_sign <- function(x){
   res <- rep(NA,length(x))
   for (i in 1:length(x)) {
@@ -27,8 +24,8 @@ custom_sign <- function(x){
 
 #' Plot a confidence heat map using the alpha/beta model
 #'
-#' @param alpha
-#' @param beta
+#' @param alpha Alpha used for the heat map plotting
+#' @param beta Beta used for the heat map plotting
 #' @param type One of 3 possible types of heat map (upper, lower and symmetrical).
 #' Upper (resp. lower) shows the confidence linked to an upper (resp. lower) boundary hit.
 #' Symmetrical shows the symmetrical heat map. Defaults to "upper"
@@ -42,10 +39,7 @@ custom_sign <- function(x){
 #' to avoid NULL values within the heat map
 #' @param upperRT Maximum time
 #'
-#' @return
 #' @export
-#'
-#' @examples
 create_modelHM <- function(alpha,beta,type="upper",plot=T,cexax=1.5,cexlab=3,cexmain=2.5,
                            dt = .0025, ev_bound = .5, ev_window = .0125, upperRT = 5){
 
@@ -71,11 +65,13 @@ create_modelHM <- function(alpha,beta,type="upper",plot=T,cexax=1.5,cexlab=3,cex
     if (type=="upper") {
       fields::image.plot(1:dim(hm_up)[1],1:dim(hm_up)[2],hm_up,zlim=c(0,1),
                          col=colMap,ylab="",xlab='',legend.shrink=.25,
-                         main=paste('alpha = ',round(alpha,3),'; beta =',round(beta,3)),
-                         axes=F,cex.main=cexmain,
-                         axis.args=list(at=seq(0,1,.5),labels=seq(0,1,.5),cex.axis=cexax))
-      mtext("Evidence",2,at=dim(hm_up)[2]/2,line=2,cex=cexlab);
-      mtext("Time (s)",1,at=dim(hm_up)[1]/2,line=2,cex=cexlab)
+                         # main=F,
+                         main=paste('\U03B1 = ',round(alpha,3),'; \U03B2 =',round(beta,3)),
+                         axes=F,cex.main=cexmain
+                         ,axis.args=list(at=seq(0,1,.5),labels=seq(0,1,.5),cex.axis=cexax)
+                         )
+      mtext("Evidence",2,at=dim(hm_up)[2]/2,line=1,cex=cexlab);
+      mtext("Time (s)",1,at=dim(hm_up)[1]/2,line=1.5,cex=cexlab)
       # axis(1,at=c(1,timesteps),labels=c(0,upperRT),cex.axis=cexax);
       # axis(2,at=c(1,length(ev_mapping)),labels=c(-ev_bound,ev_bound),cex.axis=cexax)
 
@@ -103,5 +99,3 @@ create_modelHM <- function(alpha,beta,type="upper",plot=T,cexax=1.5,cexlab=3,cex
     }
   }
 }
-
-

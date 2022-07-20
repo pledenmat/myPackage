@@ -7,10 +7,7 @@
 custom_sign(x)
 }
 \arguments{
-\item{x}{}
-}
-\value{
-
+\item{x}{vector of numerical values}
 }
 \description{
 Returns the sign of each value within a vector. If 0, returns 1 or

@@ -19,6 +19,10 @@ create_modelHM(
 )
 }
 \arguments{
+\item{alpha}{Alpha used for the heat map plotting}
+
+\item{beta}{Beta used for the heat map plotting}
+
 \item{type}{One of 3 possible types of heat map (upper, lower and symmetrical).
 Upper (resp. lower) shows the confidence linked to an upper (resp. lower) boundary hit.
 Symmetrical shows the symmetrical heat map. Defaults to "upper"}
@@ -39,9 +43,6 @@ Symmetrical shows the symmetrical heat map. Defaults to "upper"}
 to avoid NULL values within the heat map}
 
 \item{upperRT}{Maximum time}
-}
-\value{
-
 }
 \description{
 Plot a confidence heat map using the alpha/beta model

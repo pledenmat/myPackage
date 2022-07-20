@@ -1,5 +1,5 @@
 #' Change working directory
-#' 
+#'
 #' @description This function will change the working directory to the specified folder. It
 #' assumes that the destination folder is directly reachable from either the
 #' current working directory or one of its parent directories
@@ -9,7 +9,6 @@
 #' @return
 #' @export
 #'
-#' @examples
 go_to <- function(folder){
   mission_accomplished <- grepl(folder,getwd())
   while (!mission_accomplished) {

@@ -8,7 +8,6 @@
 #'
 #' @details This is the function used to simultaneously fit reaction time, accuracy and confidence judgments via quantile optimization.
 #'
-#' @examples
 #' @export
 chi_square_optim_DDM <- function(params, observations, returnFit){
   #First, generate predictions:
@@ -110,7 +109,6 @@ chi_square_optim_DDM <- function(params, observations, returnFit){
 #'
 #' @details This is the function used to simultaneously fit reaction time, accuracy and confidence judgments via quantile optimization.
 #'
-#' @examples
 #' @export
 chi_square_optim_DDM_fullconfRT <- function(params, observations, returnFit,confRT_name = "RTconf"){
   #First, generate predictions:
